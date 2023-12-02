@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     position: "absolute",
     textAlign: "center",
-    top: "26%",
+    top: "23%",
   },
   soleil: {
     width: 200, // Adjust width and height according to your image size

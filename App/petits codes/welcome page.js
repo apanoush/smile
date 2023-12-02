@@ -28,7 +28,7 @@ export default function welcome_page() {
                 <Text style = {styles.simpleText}> Enter your beautiful name :</Text>
                 <TextInput 
                 style={styles.input}
-                placeholder='e.g. Olivier'
+                placeholder='Name'
                 onChangeText={(text) => setName(text)}/>
             </View>
         
