@@ -8,6 +8,8 @@
 
 - journal, photos de lieux, activités, to do list
 
+- rendre les gens heureus (se sent bien dessus) -> app  customizable, plusieurs logos, couleurs, inclusif,
+
 ## détails techniques
 
 - pas de serveur, juste des fichiers locaux
@@ -22,4 +24,12 @@
 
 - parti ui swift xcode ios olivier
 - backend algo, data structures anoush
-- citations, visuels, dessins luna
+- citations, visuels, dessins luna, blagues
+
+
+## implementation
+
+- app ios: swift, python
+
+- app web: electron js (comme obsidian)
+- mobile app: react native
