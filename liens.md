@@ -6,3 +6,5 @@ https://reactnative.dev/docs/environment-setup?package-manager=npm
 https://expo.dev/
 
 [figma](https://www.figma.com/file/oaKSpSJ7ozZqfeKInXURl6/smile?type=design&node-id=0%3A1&mode=design&t=YxbJGUdfRdiVHycT-1)
+
+[free png images](https://pixabay.com/images/search/png/)

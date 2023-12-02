@@ -1,5 +1,7 @@
 # Smile
 
+customizable mobile app that makes people happy by showing them relevant content
+
 - smile "votre reseau"
 - design eppuré mais reconnaissable
 - donne le smile
@@ -8,7 +10,7 @@
 
 - journal, photos de lieux, activités, to do list
 
-- rendre les gens heureus (se sent bien dessus) -> app  customizable, plusieurs logos, couleurs, inclusif, 
+- rendre les gens heureux (se sent bien dessus) -> app  customizable, plusieurs logos, couleurs, inclusif, 
 - pas dire quoi faire, juste des propositions
 
 ## détails techniques
