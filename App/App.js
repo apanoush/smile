@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Image, StyleSheet,Text } from 'react-native';
+import NamePrompt from './petits codes/name prompt';
 
 
 export default function App() {
@@ -22,6 +23,8 @@ export default function App() {
       {/*Welcome to Smile*/}
       <View style={styles.TextContainer}>
       <Text style = {styles.Title}> Welcome{'\n'}       on{'\n'}   SMILE</Text>
+
+      <NamePrompt />
       </View>
 
     </View>
