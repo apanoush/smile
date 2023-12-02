@@ -8,7 +8,8 @@
 
 - journal, photos de lieux, activités, to do list
 
-- rendre les gens heureus (se sent bien dessus) -> app  customizable, plusieurs logos, couleurs, inclusif,
+- rendre les gens heureus (se sent bien dessus) -> app  customizable, plusieurs logos, couleurs, inclusif, 
+- pas dire quoi faire, juste des propositions
 
 ## détails techniques
 
@@ -18,7 +19,10 @@
 
 - algo choisit meilleurs souvenirs au moment opportun
     - algo random
-- citations
+- musiques, blagues, mode prout
+- message personalisé d'accueil
+    - citations (pendant la citation + baby smiley)
+
 
 ## repartition des tâches
 
