@@ -1,41 +1,16 @@
 
 import { View, Image, StyleSheet,Text, TextInput } from 'react-native';
 import React, { useState } from 'react';
+import welcome_page from './petits codes/welcome page';
 
 
 export default function App() {
- const [name, setName] = useState('olivier');
+  const [name, setName] = useState('olivier');
+  welcome_page();
 
   return (
-    <View style={styles.container}>
-      
-      {/*HI*/}
-      <View style={styles.TitleContainer}>
-      <Text style = {styles.Title}>HI</Text>
-      </View>
-      {/*Soleil*/}
-        <View style={styles.SoleilContainer}>
-        <Image 
-        source={require('./assets/sun.png')}
-        style={styles.soleil}
-        resizeMode="contain"
-        />
-        </View>
-      {/*Welcome to Smile*/}
-      <View style={styles.TextContainer}>
-      <Text style = {styles.Title}> Welcome{'\n'}       on{'\n'}   SMILE</Text>
-      </View>
-      {/*Prompt*/}
-      <View style={styles.prompt}>
-        <Text style = {styles.simpleText}> Enter your beautiful name :</Text>
-        <TextInput 
-        style={styles.input}
-        placeholder='e.g. Olivier'
-        onChangeText={(text) => setName(text)}/>
-      </View>
-
-      
-
+    <View>
+      <welcome_page />
     </View>
 
   );
