@@ -238,3 +238,67 @@ expo start
 Follow the instructions to run the app on an emulator or device.
 
 Congratulations! You've built your first React Native app. This is just the beginning, and there's a lot more to explore and learn as you dive deeper into React Native development.
+
+---
+
+*do you know how to use expo to visualize the changes being made?*
+
+Certainly! Expo provides a convenient way to visualize and test your React Native app in real-time. Here's a step-by-step guide on how to use Expo to visualize changes:
+
+### 1. Install Expo CLI:
+
+If you haven't installed Expo CLI, you can do so globally by running the following command in your terminal:
+
+```bash
+npm install -g expo-cli
+```
+
+### 2. Create a New Expo Project:
+
+Create a new Expo project using the following commands:
+
+```bash
+expo init MyExpoApp
+cd MyExpoApp
+```
+
+Choose a template when prompted (e.g., "blank" or "tabs").
+
+### 3. Start the Expo Development Server:
+
+```bash
+expo start
+```
+
+This command will open a new tab in your browser with the Expo DevTools and a QR code.
+
+### 4. Install the Expo Go App:
+
+On your iOS or Android device, install the Expo Go app from the App Store or Google Play.
+
+### 5. Connect Your Device:
+
+- For iOS, use the built-in camera app to scan the QR code in the Expo DevTools.
+- For Android, open the Expo Go app and scan the QR code.
+
+### 6. Visualize Changes:
+
+As you make changes to your React Native code, Expo will automatically detect the changes and reload the app on your device. You'll see the updates in real-time.
+
+### 7. Access Development Tools:
+
+While the Expo app is running on your device, you can press `d` in the terminal to open Expo DevTools, where you can access various development tools, including hot reloading, debugging, and more.
+
+### 8. Experiment and Learn:
+
+Now you can experiment with your app, make changes to the code, and see the results instantly on your device. This is a powerful way to speed up the development process and iterate on your app's UI and functionality.
+
+### 9. Accessing Expo DevTools:
+
+You can access the Expo DevTools by pressing `d` in the terminal where `expo start` is running. This will open a new browser window with various options for managing your Expo project.
+
+### 10. Shake Gesture (Optional):
+
+On your physical device, you can shake it to bring up the Expo Developer Menu, where you can access similar options as in Expo DevTools.
+
+That's it! You can now visualize and test your React Native app in real-time using Expo. This workflow is especially beneficial for rapidly iterating on your app during development.
