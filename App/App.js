@@ -1,6 +1,7 @@
+
 import Welcome1 from './components/Welcome1.js';
 import Welcome2 from './components/Welcome2.js';
-import Colors from './components/color page.js';
+import Welcome3 from './components/Welcome3.js';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Colors from './components/color page.js';
@@ -13,7 +14,8 @@ const App =() => {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Welcome1} />
         <Stack.Screen name="SecondScreen" component={Welcome2} />
-        <Stack.Screen name="ThirdScreen" component={Colors} />
+        <Stack.Screen name="ThirdScreen" component={Welcome3} />
+        <Stack.Screen name="FourthScreen" component={Colors} />
       </Stack.Navigator>
     </NavigationContainer>
   );

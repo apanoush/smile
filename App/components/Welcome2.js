@@ -1,58 +1,40 @@
-import { View, Image, StyleSheet,Text, TextInput, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+import { View, Image, StyleSheet,Text,Button } from 'react-native';
 
-const Welcome2 = ({firstVisit}) => {
-    const [name, setName] = useState('olivier');
 
-    const RoundedButton = ({ onPress, title }) => {
-        return (
-          <TouchableOpacity style={styles.buttonContainer} onPress={ () => navigation.navigate('ThirdScreen', {name: name})}>
-            <Text style={styles.buttonText}>{title}</Text>
-          </TouchableOpacity>
-        );
-      };
-
+const Welcome2 = ({route,navigation}) => {
+    const {name} = route.params;
     return (
         <View style={styles.container}>
-            <View style={styles.container}>
-                
-                {/*HI*/}
-                <View style={styles.TitleContainer}>
-                <Text style = {styles.Title}>First</Text>
-                </View>
-                {/*Soleil*/}
-                    <View style={styles.SoleilContainer}>
-                    <Image 
-                    source={require('../assets/sun.png')}
-                    style={styles.soleil}
-                    resizeMode="contain"
-                    />
-                    </View>
-                {/*Welcome to Smile*/}
-                <View style={styles.TextContainer}>
-                <Text style = {styles.Title}>design</Text>
-                <Text style = {styles.Title}>your</Text>
-                <Text style = {styles.Title}>dream</Text>
-                <Text style = {styles.Title}>app</Text>
-                </View>
+            
+            {/*HI*/}
+            <View style={styles.TitleContainer}>
+            <Text style = {styles.Title}>HI</Text>
             </View>
-
-            <View style={styles.container2}>
-                
-                <RoundedButton 
-                title="Pick the Color" 
-                onPress={ () => navigation.navigate('ThirdScreen', {name: name})}
+            {/*Soleil*/}
+                <View style={styles.SoleilContainer}>
+                <Image 
+                source={require('../assets/sun.png')}
+                style={styles.soleil}
+                resizeMode="contain"
                 />
-                <RoundedButton title="Pick the logo" ></RoundedButton>
-                <RoundedButton title="Pick the color" onPress={ () => navigation.navigate('ThirdScreen', {name: name})}> </RoundedButton>
-
+                </View>
+            {/*Welcome to Smile*/}
+            <View style={styles.TextContainer}>
+            <Text style = {styles.Title}> {name} </Text>
             </View>
+            
+            {/*Button*/}
+            <View style={styles.button}>
+                <Button
+                title="Start the journey :)"
+                color="#FFC300"
+                onPress={ () => navigation.navigate('ThirdScreen')}
+                />
+            </View>
+
+        
 
         </View>
-        
-
-        
-
     );
 
 };
@@ -62,12 +44,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#FFF1A6',
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    container2: {
-        flex: 1,
-        backgroundColor: '#FFF1A6',
-        alignItems: 'left',
-        justifyContent: 'left',
     },
     Title : {
       color: '#000000',
@@ -112,16 +88,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontFamily: "Georgia"
     },
-    buttonContainer: {
-        backgroundColor: 'orange', // Button background color
-        borderRadius: 15, // Adjust the border radius to control the roundness
-        padding: 10,
-        alignItems: 'center',
-    },
-    buttonText: {
-      color: 'white', // Button text color
-      fontSize: 20,
-    },
+
+    button: {
+        position: "absolute",
+        textAlign: "center",
+        top: "90%",
+      },
   
   });
 export default Welcome2;

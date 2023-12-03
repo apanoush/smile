@@ -1,32 +1,47 @@
-import { View, Image, StyleSheet,Text, TextInput } from 'react-native';
+import { View, Image, StyleSheet,Text,Button} from 'react-native';
 
-const Colors = ({navigation}) => {
+const Welcome3 = ({navigation}) => {
     
-    
-      
+
     return (
         <View style={styles.container}>
-            
-        
-            <View style={styles.TitleContainer}>
-            </View>
-            {/*Soleil*/}
-                <View style={styles.SoleilContainer}>
-                <Image 
-                source={require('../assets/sun.png')}
-                style={styles.soleil}
-                resizeMode="contain"
-                />
+            <View style={styles.container}>
+                
+                {/*HI*/}
+                <View style={styles.TitleContainer}>
+                <Text style = {styles.Title}>First</Text>
                 </View>
-            
-            {/*Colors*/}
+                {/*Soleil*/}
+                    <View style={styles.SoleilContainer}>
+                    <Image 
+                    source={require('../assets/sun.png')}
+                    style={styles.soleil}
+                    resizeMode="contain"
+                    />
+                    </View>
+                {/*Welcome to Smile*/}
+                <View style={styles.TextContainer}>
+                <Text style = {styles.Title}>design</Text>
+                <Text style = {styles.Title}>your</Text>
+                <Text style = {styles.Title}>dream</Text>
+                <Text style = {styles.Title}>app</Text>
+                </View>
+            </View>
+
             <View style={styles.container2}>
                 
-               
+            
+                <Button title="Pick the logo" ></Button>
+                <Button title="Pick the color" onPress={ () => navigation.navigate('FourthScreen')}> </Button>
 
             </View>
+
         </View>
-        );
+        
+
+        
+
+    );
 
 };
 const styles = StyleSheet.create({
@@ -92,9 +107,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonText: {
-    color: 'white', // Button text color
-    fontSize: 20,
+      color: 'white', // Button text color
+      fontSize: 20,
     },
   
   });
-export default Colors;
+export default Welcome3;
