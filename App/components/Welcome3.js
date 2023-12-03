@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet,Text,Button} from 'react-native';
+import { View, Image, StyleSheet,Text,Button,TouchableOpacity} from 'react-native';
 
 const Welcome3 = ({navigation}) => {
     
@@ -28,13 +28,15 @@ const Welcome3 = ({navigation}) => {
                 </View>
             </View>
 
-            <View style={styles.container2}>
-                
             
-                <Button title="Pick the logo" ></Button>
-                <Button title="Pick the color" onPress={ () => navigation.navigate('FourthScreen')}> </Button>
+              {/*Button*/} 
+              <TouchableOpacity style = {styles.logoButton}>
+              <Text style={styles.buttonText}>Pick the logo</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style = {styles.colorButton} onPress={() => navigation.navigate('FourthScreen')}>
+              <Text style={styles.buttonText}>Pick the color</Text>
+              </TouchableOpacity>
 
-            </View>
 
         </View>
         
@@ -50,12 +52,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#FFF1A6',
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    container2: {
-        flex: 1,
-        backgroundColor: '#FFF1A6',
-        alignItems: 'left',
-        justifyContent: 'left',
     },
     Title : {
       color: '#000000',
@@ -83,31 +79,27 @@ const styles = StyleSheet.create({
       height: 100,
       backgroundColor: 'transparent'
     },
-    prompt: {
-      position: "absolute",
-      textAlign: "center",
-      top: "60%",
-    },
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-    },
     simpleText: {
       fontSize: 25,
       color: '#000000',
       textAlign: 'center',
       fontFamily: "Georgia"
     },
-    buttonContainer: {
-        backgroundColor: 'orange', // Button background color
-        borderRadius: 15, // Adjust the border radius to control the roundness
-        padding: 10,
-        alignItems: 'center',
+    colorButton: {
+      backgroundColor: '#FFC300', // Button background color
+      padding: 10,
+      borderRadius: 4,
+      
+    },
+    logoButton: {
+      backgroundColor: '#FFC300', // Button background color
+      padding: 10,
+      borderRadius: 4,
+      
     },
     buttonText: {
       color: 'white', // Button text color
+      textAlign: 'center',
       fontSize: 20,
     },
   

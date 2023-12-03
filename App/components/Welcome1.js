@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 const Welcome1 = ({navigation}) => {
-    const [name, setName] = useState('olivier');
+    const [name, setName] = useState();
     return (
         <View style={styles.container}>
             
