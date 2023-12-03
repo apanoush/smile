@@ -177,3 +177,231 @@ In this example:
 4. The component is exported as the default export, making it available for use in other parts of your application.
 
 You can include any logic or functionality within your functions based on your requirements. React Native functions can be used to handle user interactions, perform calculations, make API calls, or update component state, among other things.
+
+---
+
+*how to change the page in react (going to the next page)*
+
+In React, particularly in a React Native application, navigation between pages (or screens) is typically managed using a navigation library. One popular navigation library for React Native is React Navigation. Here, I'll provide a basic example of how you can use React Navigation to navigate to the next page in a React Native app.
+
+### Step 1: Install React Navigation
+
+```bash
+npm install @react-navigation/native
+```
+
+### Step 2: Install Dependencies
+
+```bash
+# If you are using React Navigation version 5.x
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/viewpager
+
+# If you are using React Navigation version 6.x
+npm install react-native-screens react-native-safe-area-context @react-native-community/viewpager
+```
+
+### Step 3: Install Stack Navigator (for version 5.x)
+
+```bash
+npm install @react-navigation/stack
+```
+
+### Step 4: Set Up Navigation
+
+Create a file for your navigation setup (e.g., `Navigation.js`):
+
+```jsx
+// Navigation.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import FirstScreen from './FirstScreen'; // Create this file
+import SecondScreen from './SecondScreen'; // Create this file
+
+const Stack = createStackNavigator();
+
+const Navigation = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="FirstScreen">
+        <Stack.Screen name="FirstScreen" component={FirstScreen} />
+        <Stack.Screen name="SecondScreen" component={SecondScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default Navigation;
+```
+
+### Step 5: Create Screens
+
+Create your screen components (`FirstScreen.js` and `SecondScreen.js`):
+
+```jsx
+// FirstScreen.js
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+
+const FirstScreen = ({ navigation }) => {
+  const goToSecondScreen = () => {
+    navigation.navigate('SecondScreen');
+  };
+
+  return (
+    <View>
+      <Text>First Screen</Text>
+      <Button title="Go to Second Screen" onPress={goToSecondScreen} />
+    </View>
+  );
+};
+
+export default FirstScreen;
+```
+
+```jsx
+// SecondScreen.js
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const SecondScreen = () => {
+  return (
+    <View>
+      <Text>Second Screen</Text>
+    </View>
+  );
+};
+
+export default SecondScreen;
+```
+
+### Step 6: Integrate Navigation
+
+Now, in your main app file (e.g., `App.js`), import and use the `Navigation` component:
+
+```jsx
+// App.js
+import React from 'react';
+import Navigation from './Navigation';
+
+const App = () => {
+  return <Navigation />;
+};
+
+export default App;
+```
+
+This example demonstrates basic navigation between two screens using React Navigation. When the button is pressed on the first screen, it navigates to the second screen. Adjust the code according to your specific needs and styling preferences.
+
+---
+
+*make me an example of a react js app made of 2 screens made with react naviguation*
+
+Certainly! Below is a simple example of a React.js app with two screens using React Navigation. Note that React Navigation is primarily designed for React Native, but you can use the `react-navigation-dom` library to achieve navigation in a web environment.
+
+### Step 1: Install Dependencies
+
+```bash
+npm install @react-navigation/native react-navigation-dom
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/viewpager
+npm install react-dom
+```
+
+### Step 2: Create a Navigation Component
+
+Create a `Navigation.js` file:
+
+```jsx
+// Navigation.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import FirstScreen from './FirstScreen';
+import SecondScreen from './SecondScreen';
+
+const Stack = createNativeStackNavigator();
+
+const Navigation = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="FirstScreen">
+        <Stack.Screen name="FirstScreen" component={FirstScreen} />
+        <Stack.Screen name="SecondScreen" component={SecondScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default Navigation;
+```
+
+### Step 3: Create Screens
+
+Create `FirstScreen.js`:
+
+```jsx
+// FirstScreen.js
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+
+const FirstScreen = ({ navigation }) => {
+  const goToSecondScreen = () => {
+    navigation.navigate('SecondScreen');
+  };
+
+  return (
+    <View>
+      <Text>First Screen</Text>
+      <Button title="Go to Second Screen" onPress={goToSecondScreen} />
+    </View>
+  );
+};
+
+export default FirstScreen;
+```
+
+Create `SecondScreen.js`:
+
+```jsx
+// SecondScreen.js
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const SecondScreen = () => {
+  return (
+    <View>
+      <Text>Second Screen</Text>
+    </View>
+  );
+};
+
+export default SecondScreen;
+```
+
+### Step 4: Integrate Navigation
+
+In your main app file (`App.js`), import and use the `Navigation` component:
+
+```jsx
+// App.js
+import React from 'react';
+import Navigation from './Navigation';
+
+const App = () => {
+  return <Navigation />;
+};
+
+export default App;
+```
+
+### Step 5: Run the App
+
+Now, you can run your React.js app:
+
+```bash
+npm start
+```
+
+Visit `http://localhost:3000` in your browser, and you should see the first screen with a button to navigate to the second screen.
+
+Note: The code above uses `createNativeStackNavigator` from `@react-navigation/native-stack` because `createStackNavigator` from `@react-navigation/stack` is intended for React Native. The `react-navigation-dom` library provides web support for React Navigation. Adjustments may be needed based on your specific use case and requirements.

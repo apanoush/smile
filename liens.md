@@ -10,3 +10,5 @@ https://expo.dev/
 [free png images](https://pixabay.com/images/search/png/)
 
 [playlist react mieux](https://youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&si=qyMHfM9hrCkJ_GM8)
+
+[react navigation](https://reactnavigation.org/docs/getting-started/)
