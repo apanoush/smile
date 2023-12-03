@@ -20,7 +20,7 @@ const Colors = ({navigation}) => {
                 />
                 </View>
             
-            {/*Colors*/}
+            {/*Colorsr1*/}
             <View style={ [styles.button, styles.buttonRow]}>
             <Button
                 title="     "
@@ -47,6 +47,9 @@ const Colors = ({navigation}) => {
                 color="#A20000" // You can set the text color
                 onPress={() => setBackgroundColor("#A20000")}
                 />
+            </View>
+            {/*Colorsr2*/}
+            <View style={ [styles.buttonr2, styles.buttonRow2]}>
             <Button
                 title="     "
                 color="#FFCF97" // You can set the text color
@@ -74,7 +77,7 @@ const Colors = ({navigation}) => {
                 />
             </View>
         </View>
-        );
+    );
 
 };
 const styles = StyleSheet.create({
@@ -132,17 +135,39 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         flexWrap: 'wrap', // Wrap to the next line if needed
-        marginTop: 20,
         //padding:10,
-        paddingVertical: 50,
+        //paddingVertical: 10,
+        //paddingHorizontal: 15,
       },
-      button: {
-        width: '40%', // Adjust the width to fit 5 buttons per line
+    button: {
+        width: '60%',
+        height: 90,
         borderRadius: 20,
-        padding: 10,
-        //backgroundColor: 'transparent',
-        //alignItems: 'center',
-        marginBottom: 20, // Adjust this value to control the vertical space between rows
+        padding: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 5, // Adjust this value for more space between buttons vertically
+        backgroundColor: 'transparent',
+    
+    },
+    buttonRow2: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap', // Wrap to the next line if needed
+        //padding:10,
+        //paddingVertical: 10,
+        //paddingHorizontal: 15,
       },
+    buttonr2: {
+        width: '60%',
+        height: 90,
+        borderRadius: 20,
+        padding: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 5, // Adjust this value for more space between buttons vertically
+        backgroundColor: 'transparent',
+    
+    },
 });
 export default Colors;
