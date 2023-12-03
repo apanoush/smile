@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, StyleSheet, Text, TextInput, Button } from 'react-native';
+import { View, Image, StyleSheet, Text, Button, TouchableOpacity } from 'react-native';
 
 const Colors = ({navigation}) => {
     
@@ -76,6 +76,12 @@ const Colors = ({navigation}) => {
                 onPress={() => setBackgroundColor("#C26900")}
                 />
             </View>
+            <View style={styles.buttonSave}>
+              <TouchableOpacity style = {styles.colorButton} onPress={() => navigation.navigate('ThirdScreen', {backgroundColor: backgroundColor})}>
+              <Text style={styles.buttonText}>Save</Text>
+              </TouchableOpacity>
+            </View>
+
         </View>
     );
 
@@ -97,11 +103,6 @@ const styles = StyleSheet.create({
       textAlign: "center",
       top: "15%",
     },
-    TextContainer:{
-      position: "absolute",
-      textAlign: "center",
-      top: "38%",
-    },
     SoleilContainer:{
       backgroundColor: 'transparent',
       position: "absolute",
@@ -112,23 +113,6 @@ const styles = StyleSheet.create({
       width: 200, // Adjust width and height according to your image size
       height: 100,
       backgroundColor: 'transparent'
-    },
-    prompt: {
-      position: "absolute",
-      textAlign: "center",
-      top: "60%",
-    },
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-    },
-    simpleText: {
-      fontSize: 25,
-      color: '#000000',
-      textAlign: 'center',
-      fontFamily: "Georgia"
     },
 
     buttonRow: {
@@ -169,5 +153,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
     
     },
+
+    buttonSave: {
+      backgroundColor: '#FFC300', // Button background color
+      padding: 10,
+      borderRadius: 15,
+      top: '30%'
+    }
 });
 export default Colors;

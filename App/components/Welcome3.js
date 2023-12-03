@@ -1,47 +1,50 @@
-import { View, Image, StyleSheet,Text,Button,TouchableOpacity} from 'react-native';
+import { View, Image, StyleSheet,Text,TouchableOpacity} from 'react-native';
 
-const Welcome3 = ({navigation}) => {
+const Welcome3 = ({route, navigation}) => {
     
+  console.log('route:', route);
+  const { backgroundColor } = route.params || {};
+  console.log('backgroundColor:', backgroundColor);
 
-    return (
-        <View style={styles.container}>                
-                {/*HI*/}
-                <View style={styles.TitleContainer}>
-                <Text style = {styles.Title}>First</Text>
-                </View>
-                {/*Soleil*/}
-                    <View style={styles.SoleilContainer}>
-                    <Image 
-                    source={require('../assets/sun.png')}
-                    style={styles.soleil}
-                    resizeMode="contain"
-                    />
-                    </View>
-                {/*Welcome to Smile*/}
-                <View style={styles.TextContainer}>
-                <Text style = {styles.Title}>design</Text>
-                <Text style = {styles.Title}>your</Text>
-                <Text style = {styles.Title}>dream</Text>
-                <Text style = {styles.Title}>app</Text>
-                </View>
-            
-              {/*Button*/} 
-              <TouchableOpacity style = {styles.logoButton}>
-              <Text style={styles.buttonText}>Pick the logo</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style = {styles.colorButton} onPress={() => navigation.navigate('FourthScreen')}>
-              <Text style={styles.buttonText}>Pick the color</Text>
-              </TouchableOpacity>
+  return (
+      <View style={[styles.container, { backgroundColor: backgroundColor }]}>                
+              {/*HI*/}
+              <View style={styles.TitleContainer}>
+              <Text style = {styles.Title}>First</Text>
+              </View>
+              {/*Soleil*/}
+                  <View style={styles.SoleilContainer}>
+                  <Image 
+                  source={require('../assets/sun.png')}
+                  style={styles.soleil}
+                  resizeMode="contain"
+                  />
+                  </View>
+              {/*Welcome to Smile*/}
+              <View style={styles.TextContainer}>
+              <Text style = {styles.Title}>design</Text>
+              <Text style = {styles.Title}>your</Text>
+              <Text style = {styles.Title}>dream</Text>
+              <Text style = {styles.Title}>app</Text>
+              </View>
+          
+            {/*Button*/} 
+            <TouchableOpacity style = {styles.logoButton}>
+            <Text style={styles.buttonText}>Pick the logo</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style = {styles.colorButton} onPress={() => navigation.navigate('FourthScreen')}>
+            <Text style={styles.buttonText}>Pick the color</Text>
+            </TouchableOpacity>
 
 
-        </View>
-        
+      </View>
+      
 
         
 
     );
 
-};
+  };
 const styles = StyleSheet.create({
     container: {
       flex: 1,
