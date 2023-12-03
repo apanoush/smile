@@ -6,6 +6,13 @@ const Welcome3 = ({route, navigation}) => {
   const { backgroundColor } = route.params || {};
   console.log('backgroundColor:', backgroundColor);
 
+  
+  const handleChoice = (page) => {
+    navigation.navigate(page, { backgroundColor: backgroundColor} );
+  };
+  
+  
+
   return (
       <View style={[styles.container, { backgroundColor: backgroundColor }]}>                
               {/*HI*/}
@@ -29,10 +36,10 @@ const Welcome3 = ({route, navigation}) => {
               </View>
           
             {/*Button*/} 
-            <TouchableOpacity style = {styles.logoButton}>
+            <TouchableOpacity style = {styles.logoButton} onPress={() => handleChoice("Logos")}>
             <Text style={styles.buttonText}>Pick the logo</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {styles.colorButton} onPress={() => navigation.navigate('FourthScreen')}>
+            <TouchableOpacity style = {styles.colorButton} onPress={() => handleChoice("FourthScreen")}>
             <Text style={styles.buttonText}>Pick the color</Text>
             </TouchableOpacity>
 
@@ -45,6 +52,9 @@ const Welcome3 = ({route, navigation}) => {
     );
 
   };
+
+
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,

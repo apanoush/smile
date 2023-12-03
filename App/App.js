@@ -17,6 +17,8 @@ const App =() => {
         <Stack.Screen name="SecondScreen" component={Welcome2} />
         <Stack.Screen name="ThirdScreen" component={Welcome3} />
         <Stack.Screen name="FourthScreen" component={Colors} />
+        <Stack.Screen name="Logos" component={Logos} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
