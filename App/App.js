@@ -13,7 +13,7 @@ const App =() => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Logos} />
+        <Stack.Screen name="Home" component={Welcome1} />
         <Stack.Screen name="SecondScreen" component={Welcome2} />
         <Stack.Screen name="ThirdScreen" component={Welcome3} />
         <Stack.Screen name="FourthScreen" component={Colors} />
