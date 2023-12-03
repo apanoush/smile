@@ -39,6 +39,10 @@ const Welcome2 = ({firstVisit}) => {
 
             <View style={styles.container2}>
                 
+                <RoundedButton 
+                title="Pick the Color" 
+                onPress={ () => navigation.navigate('ThirdScreen', {name: name})}
+                />
                 <RoundedButton title="Pick the logo" ></RoundedButton>
                 <RoundedButton title="Pick the color" onPress={ () => navigation.navigate('ThirdScreen', {name: name})}> </RoundedButton>
 

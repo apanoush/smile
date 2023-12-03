@@ -3,6 +3,7 @@ import Welcome2 from './components/Welcome2.js';
 import Colors from './components/color page.js';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Colors from './components/color page.js';
 
 const Stack = createStackNavigator();
 const App =() => {

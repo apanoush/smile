@@ -29,8 +29,8 @@ const Colors = ({firstVisit}) => {
             {/*Colors*/}
             <View style={styles.container2}>
                 
-                <RoundedButton title=" " ></RoundedButton>
-                <RoundedButton title=" " ></RoundedButton>
+                <RoundedButtonColor title="" ></RoundedButtonColor>
+                <RoundedButtonColor title="" ></RoundedButtonColor>
 
             </View>
         </View>
@@ -43,6 +43,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#FFF1A6',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    container2: {
+        flex: 1,
+        backgroundColor: '#FFF1A6',
+        alignItems: 'left',
+        justifyContent: 'left',
     },
     Title : {
       color: '#000000',
@@ -86,6 +92,16 @@ const styles = StyleSheet.create({
       color: '#000000',
       textAlign: 'center',
       fontFamily: "Georgia"
+    },
+    buttonContainer: {
+        backgroundColor: 'orange', // Button background color
+        borderRadius: 15, // Adjust the border radius to control the roundness
+        padding: 10,
+        alignItems: 'center',
+    },
+    buttonText: {
+    color: 'white', // Button text color
+    fontSize: 20,
     },
   
   });
