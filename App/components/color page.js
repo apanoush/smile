@@ -1,11 +1,16 @@
-import { View, Image, StyleSheet,Text, TextInput } from 'react-native';
+import React, { useState } from 'react';
+import { View, Image, StyleSheet, Text, TextInput, Button } from 'react-native';
 
 const Colors = ({navigation}) => {
     
-    
-      
+    const [backgroundColor, setBackgroundColor] = useState('#FFF1A6');
+
+    const handleButtonClick = () => {
+        setBackgroundColor('#FFC300');
+    };
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: backgroundColor }]}>
             
         
             <View style={styles.TitleContainer}>
@@ -20,10 +25,12 @@ const Colors = ({navigation}) => {
                 </View>
             
             {/*Colors*/}
-            <View style={styles.container2}>
-                
-               
-
+            <View style={styles.button}>
+            <Button
+                title="Change Color"
+                color="#FFC300" // You can set the text color
+                onPress={handleButtonClick}
+                />
             </View>
         </View>
         );
@@ -35,12 +42,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#FFF1A6',
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    container2: {
-        flex: 1,
-        backgroundColor: '#FFF1A6',
-        alignItems: 'left',
-        justifyContent: 'left',
     },
     Title : {
       color: '#000000',
@@ -85,16 +86,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontFamily: "Georgia"
     },
-    buttonContainer: {
-        backgroundColor: 'orange', // Button background color
-        borderRadius: 15, // Adjust the border radius to control the roundness
+
+    button: {
+        borderRadius: 15,
         padding: 10,
         alignItems: 'center',
-    },
-    buttonText: {
-    color: 'white', // Button text color
-    fontSize: 20,
-    },
+      },
   
   });
 export default Colors;
