@@ -1,18 +1,21 @@
+import Welcome1 from './components/Welcome1.js';
+import Welcome2 from './components/Welcome2.js';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import React, { useState } from 'react';
-import Welcome from './components/welcome page.js';
-
-
-export default function App() {
+const Stack = createStackNavigator();
+const App =() => {
 
   return (
-   <Welcome></Welcome>
-   
-    
-
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Welcome1} />
+        <Stack.Screen name="SecondScreen" component={Welcome2} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
+export default App;
 
 
 

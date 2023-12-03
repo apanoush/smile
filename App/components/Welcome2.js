@@ -1,9 +1,9 @@
-import { View, Image, StyleSheet,Text, TextInput } from 'react-native';
+import { View, Image, StyleSheet,Text, TextInput,Button } from 'react-native';
 import React, { useState } from 'react';
 
-const Welcome = ({firstVisit}) => {
-    const [name, setName] = useState('olivier');
 
+const Welcome2 = ({navigation}) => {
+    const [name, setName] = useState('olivier');
     return (
         <View style={styles.container}>
             
@@ -31,7 +31,14 @@ const Welcome = ({firstVisit}) => {
                 placeholder='Name'
                 onChangeText={(text) => setName(text)}/>
             </View>
-        
+            {/*Button*/}
+            <View style={styles.button}>
+                <Button
+                title="Go to Home"
+                color="#FFC300"
+                onPress={ () => navigation.navigate('SecondScreen', {name: name})}
+                />
+            </View>
 
         
 
@@ -89,6 +96,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontFamily: "Georgia"
     },
+
+    button: {
+        position: "absolute",
+        textAlign: "center",
+        top: "90%",
+      },
   
   });
-export default Welcome;
+export default Welcome2;
