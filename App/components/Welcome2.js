@@ -1,48 +1,53 @@
-import { View, Image, StyleSheet,Text, TextInput,Button } from 'react-native';
+import { View, Image, StyleSheet,Text, TextInput, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 
-
-const Welcome2 = ({navigation}) => {
+const Welcome2 = ({firstVisit}) => {
     const [name, setName] = useState('olivier');
+
+    const RoundedButton = ({ onPress, title }) => {
+        return (
+          <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
+            <Text style={styles.buttonText}>{title}</Text>
+          </TouchableOpacity>
+        );
+      };
+
     return (
         <View style={styles.container}>
-            
-            {/*HI*/}
-            <View style={styles.TitleContainer}>
-            <Text style = {styles.Title}>HI</Text>
-            </View>
-            {/*Soleil*/}
-                <View style={styles.SoleilContainer}>
-                <Image 
-                source={require('../assets/sun.png')}
-                style={styles.soleil}
-                resizeMode="contain"
-                />
+            <View style={styles.container}>
+                
+                {/*HI*/}
+                <View style={styles.TitleContainer}>
+                <Text style = {styles.Title}>First</Text>
                 </View>
-            {/*Welcome to Smile*/}
-            <View style={styles.TextContainer}>
-            <Text style = {styles.Title}> Welcome{'\n'}       on{'\n'}   SMILE</Text>
+                {/*Soleil*/}
+                    <View style={styles.SoleilContainer}>
+                    <Image 
+                    source={require('../assets/sun.png')}
+                    style={styles.soleil}
+                    resizeMode="contain"
+                    />
+                    </View>
+                {/*Welcome to Smile*/}
+                <View style={styles.TextContainer}>
+                <Text style = {styles.Title}>design</Text>
+                <Text style = {styles.Title}>your</Text>
+                <Text style = {styles.Title}>dream</Text>
+                <Text style = {styles.Title}>app</Text>
+                </View>
             </View>
-            {/*Prompt*/}
-            <View style={styles.prompt}>
-                <Text style = {styles.simpleText}> Enter your beautiful name :</Text>
-                <TextInput 
-                style={styles.input}
-                placeholder='Name'
-                onChangeText={(text) => setName(text)}/>
+
+            <View style={styles.container2}>
+                
+                <RoundedButton title="Pick the logo" ></RoundedButton>
+                <RoundedButton title="Pick the color" ></RoundedButton>
+
             </View>
-            {/*Button*/}
-            <View style={styles.button}>
-                <Button
-                title="Go to Home"
-                color="#FFC300"
-                onPress={ () => navigation.navigate('SecondScreen', {name: name})}
-                />
-            </View>
+        </View>
+        
 
         
 
-        </View>
     );
 
 };
@@ -52,6 +57,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#FFF1A6',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    container2: {
+        flex: 1,
+        backgroundColor: '#FFF1A6',
+        alignItems: 'left',
+        justifyContent: 'left',
     },
     Title : {
       color: '#000000',
@@ -96,12 +107,16 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontFamily: "Georgia"
     },
-
-    button: {
-        position: "absolute",
-        textAlign: "center",
-        top: "90%",
-      },
+    buttonContainer: {
+        backgroundColor: 'orange', // Button background color
+        borderRadius: 15, // Adjust the border radius to control the roundness
+        padding: 10,
+        alignItems: 'center',
+    },
+    buttonText: {
+    color: 'white', // Button text color
+    fontSize: 20,
+    },
   
   });
 export default Welcome2;
