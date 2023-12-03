@@ -5,10 +5,6 @@ const Colors = ({navigation}) => {
     
     const [backgroundColor, setBackgroundColor] = useState('#FFF1A6');
 
-    const handleButtonClick = () => {
-        setBackgroundColor('#FFC300');
-    };
-
     return (
         <View style={[styles.container, { backgroundColor: backgroundColor }]}>
             
@@ -25,11 +21,56 @@ const Colors = ({navigation}) => {
                 </View>
             
             {/*Colors*/}
-            <View style={styles.button}>
+            <View style={ [styles.button, styles.buttonRow]}>
             <Button
-                title="Change Color"
-                color="#FFC300" // You can set the text color
-                onPress={handleButtonClick}
+                title="     "
+                color="#FFFFFF" // You can set the text color
+                onPress={() => setBackgroundColor("#FFFFFF")}
+                />
+            <Button
+                title="     "
+                color="#FBDCDC" // You can set the text color
+                onPress={() => setBackgroundColor("#FBDCDC")}
+                />
+            <Button
+                title="     "
+                color="#F89797" // You can set the text color
+                onPress={() => setBackgroundColor("#F89797")}
+                />
+            <Button
+                title="     "
+                color="#FF1C1C" // You can set the text color
+                onPress={() => setBackgroundColor("#FF1C1C")}
+                />
+            <Button
+                title="     "
+                color="#A20000" // You can set the text color
+                onPress={() => setBackgroundColor("#A20000")}
+                />
+            <Button
+                title="     "
+                color="#FFCF97" // You can set the text color
+                onPress={() => setBackgroundColor("#FFCF97")}
+                />
+            <Button
+                title="     "
+                color="#FFAC7D" // You can set the text color
+                onPress={() => setBackgroundColor("#FFAC7D")}
+                />
+            <Button
+                title="     "
+                color="#FFB23F" // You can set the text color
+                onPress={() => setBackgroundColor("#FFB23F")}
+                />
+            <Button
+                title="     "
+                color="#FF9900" // You can set the text color
+                onPress={() => setBackgroundColor("#FF9900")}
+                />
+            <Button
+                title="     "
+                color="#C26900" // You can set the text color
+                onPress={() => setBackgroundColor("#C26900")}
                 />
             </View>
         </View>
@@ -87,11 +128,21 @@ const styles = StyleSheet.create({
       fontFamily: "Georgia"
     },
 
-    button: {
-        borderRadius: 15,
-        padding: 10,
-        alignItems: 'center',
+    buttonRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap', // Wrap to the next line if needed
+        marginTop: 20,
+        //padding:10,
+        paddingVertical: 50,
       },
-  
-  });
+      button: {
+        width: '40%', // Adjust the width to fit 5 buttons per line
+        borderRadius: 20,
+        padding: 10,
+        //backgroundColor: 'transparent',
+        //alignItems: 'center',
+        marginBottom: 20, // Adjust this value to control the vertical space between rows
+      },
+});
 export default Colors;
