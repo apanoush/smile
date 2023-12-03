@@ -28,9 +28,8 @@ customizable mobile app that makes people happy by showing them relevant content
 
 ## repartition des tâches
 
-- parti ui swift xcode ios olivier
-- backend algo, data structures anoush
-- citations, visuels, dessins luna, blagues
+- react native + maquette visuelle et assets: luna
+- react native dev: olivier et anoush
 
 
 ## implementation
