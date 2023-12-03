@@ -36,7 +36,7 @@ const Welcome1 = ({navigation}) => {
                 <Button
                 title="Go to Home"
                 color="#FFC300"
-                onPress={ () => navigation.navigate('SecondScreen', {name: name})}
+                onPress={ () => navigation.navigate('ThirdScreen', {name: name})}
                 />
             </View>
 

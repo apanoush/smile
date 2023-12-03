@@ -6,7 +6,7 @@ const Welcome2 = ({firstVisit}) => {
 
     const RoundedButton = ({ onPress, title }) => {
         return (
-          <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
+          <TouchableOpacity style={styles.buttonContainer} onPress={ () => navigation.navigate('ThirdScreen', {name: name})}>
             <Text style={styles.buttonText}>{title}</Text>
           </TouchableOpacity>
         );
@@ -40,9 +40,10 @@ const Welcome2 = ({firstVisit}) => {
             <View style={styles.container2}>
                 
                 <RoundedButton title="Pick the logo" ></RoundedButton>
-                <RoundedButton title="Pick the color" ></RoundedButton>
+                <RoundedButton title="Pick the color" onPress={ () => navigation.navigate('ThirdScreen', {name: name})}> </RoundedButton>
 
             </View>
+
         </View>
         
 
@@ -114,8 +115,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonText: {
-    color: 'white', // Button text color
-    fontSize: 20,
+      color: 'white', // Button text color
+      fontSize: 20,
     },
   
   });
