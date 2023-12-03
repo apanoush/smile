@@ -4,9 +4,7 @@ const Welcome3 = ({navigation}) => {
     
 
     return (
-        <View style={styles.container}>
-            <View style={styles.container}>
-                
+        <View style={styles.container}>                
                 {/*HI*/}
                 <View style={styles.TitleContainer}>
                 <Text style = {styles.Title}>First</Text>
@@ -26,8 +24,6 @@ const Welcome3 = ({navigation}) => {
                 <Text style = {styles.Title}>dream</Text>
                 <Text style = {styles.Title}>app</Text>
                 </View>
-            </View>
-
             
               {/*Button*/} 
               <TouchableOpacity style = {styles.logoButton}>
@@ -88,19 +84,22 @@ const styles = StyleSheet.create({
     colorButton: {
       backgroundColor: '#FFC300', // Button background color
       padding: 10,
-      borderRadius: 4,
+      borderRadius: 15,
+      top: '28%'
       
     },
     logoButton: {
       backgroundColor: '#FFC300', // Button background color
       padding: 10,
-      borderRadius: 4,
+      borderRadius: 15,
+      top: '40%'
+
       
     },
     buttonText: {
       color: 'white', // Button text color
       textAlign: 'center',
-      fontSize: 20,
+      fontSize: 25,
     },
   
   });

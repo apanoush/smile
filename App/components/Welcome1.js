@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
     button: {
         position: "absolute",
         textAlign: "center",
-        top: "90%",
-      },
+        top: "90%"      
+    },
   
   });
 export default Welcome1;
