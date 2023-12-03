@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import Welcome from './petits codes/welcome page.js';
+import Welcome from './components/welcome page.js';
 
 
 export default function App() {
