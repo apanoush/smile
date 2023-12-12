@@ -21,7 +21,7 @@ customizable mobile app that makes people happy by showing them relevant content
 
 - algo choisit meilleurs souvenirs au moment opportun
     - algo random
-- musiques, blagues, mode prout
+- musiques, blagues
 - message personalisé d'accueil
     - citations (pendant la citation + baby smiley)
 
